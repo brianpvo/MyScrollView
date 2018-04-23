@@ -23,10 +23,7 @@
 -(void)viewScroll:(UIPanGestureRecognizer *)sender {
     CGPoint translationView = [sender translationInView:self];
     
-    //NSLog(@"translation %@", NSStringFromCGPoint(translationView));
-    
     CGFloat myScrollViewY = self.bounds.origin.y;
-    NSLog(@"myScrollViewY %f", myScrollViewY);
     
     CGFloat currentY = myScrollViewY - translationView.y;
     
@@ -45,12 +42,5 @@
     
     [sender setTranslation:CGPointZero inView:self];
 }
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
-}
-*/
 
 @end
