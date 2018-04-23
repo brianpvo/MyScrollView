@@ -39,14 +39,10 @@
     UIView *yellowView = [[UIView alloc] initWithFrame:CGRectMake(100, 600, 180, 150)];
     yellowView.backgroundColor = [UIColor yellowColor];
     [secondView addSubview:yellowView];
+    self.myScrollView.contentSize = CGSizeMake(self.myScrollView.bounds.size.width,
+                                               CGRectGetMaxY(yellowView.frame));
+    NSLog(@"y value %f", CGRectGetMaxY(yellowView.frame));
     
-}
-
--(void)viewDidAppear:(BOOL)animated {
-    self.view.bounds = CGRectMake(self.view.bounds.origin.x,
-                                  self.view.bounds.origin.y + 100,
-                                  self.view.bounds.size.width,
-                                  self.view.bounds.size.height);
 }
 
 
