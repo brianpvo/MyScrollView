@@ -33,11 +33,10 @@
     if (currentY <= 0) {
         currentY = 0;
     }
-    else if (currentY >= self.contentSize.height) {
-        currentY = self.contentSize.height;
-    }
 
-    NSLog(@"current y %f", currentY);
+    else if (currentY >= (self.contentSize.height - self.frame.size.height)) {
+        currentY = (self.contentSize.height - self.frame.size.height);
+    }
     
     self.bounds = CGRectMake(self.bounds.origin.x,
                                           currentY,

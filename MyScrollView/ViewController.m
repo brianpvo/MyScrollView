@@ -22,6 +22,7 @@
     // Do any additional setup after loading the view, typically from a nib.
     CGRect frame = self.view.frame;
     self.myScrollView = [[MyScrollView alloc] initWithFrame:frame];
+    self.myScrollView.backgroundColor = [UIColor lightGrayColor];
     [self.view addSubview:self.myScrollView];
     
     UIView *secondView = [[UIView alloc] initWithFrame: frame];
@@ -39,6 +40,7 @@
     UIView *yellowView = [[UIView alloc] initWithFrame:CGRectMake(100, 600, 180, 150)];
     yellowView.backgroundColor = [UIColor yellowColor];
     [secondView addSubview:yellowView];
+    
     self.myScrollView.contentSize = CGSizeMake(self.myScrollView.bounds.size.width,
                                                CGRectGetMaxY(yellowView.frame));
     NSLog(@"y value %f", CGRectGetMaxY(yellowView.frame));
